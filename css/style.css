@@ -1,0 +1,122 @@
+body{
+	background-color: darkgray;
+}
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+}
+.page__container{
+	max-width: 1500px;
+	margin: 0 auto;
+	background-color: white;
+	border-radius: 50px;
+	margin-top: 100px;
+	padding: 50px;
+	animation: page 3s ease 1s forwards;
+}
+.block__item{
+	width: 50px;
+	height: 50px;
+	position: relative;
+	background-color: cadetblue;
+	transition: all 2s ease;
+}
+.block:hover .block__item{
+	width: 200px;
+	height: 200px;
+}
+.text {
+}
+.text__title {
+	font-weight: 700;
+	font-size: 40px;
+	opacity: 0;
+	transform: translate(0, 50%);
+	animation: title 0.3s ease 4s forwards;
+}
+.text__title:not(:last-child){
+	margin-bottom: 30px;
+}
+.text__subtitle {
+	font-size: 34px;
+	opacity: 0;
+	transform: translate(0, 50%);
+	animation: title 0.3s ease 4.3s forwards;
+}
+.text__subtitle:not(:last-child){
+	margin-bottom: 15px;
+}
+.text__lorem {
+	margin-bottom: 50px;
+	font-size: 24px;
+	line-height: 1.2;
+	opacity: 0;
+	transform: translate(0, 50%);
+	animation: title 0.3s ease 4.6s forwards;
+}
+@keyframes title {
+	0%{
+		transform: translate(0,50%);
+		opacity: 0;
+	}
+	100%{
+		transform: translate(0,0%);
+		opacity: 1;
+	}
+}
+.animation{
+	position: relative;
+}
+.animation__block{
+	width: 150px;
+	height: 150px;
+	background-color: brown;
+	border-radius: 5px;
+	padding-bottom: 50px;
+	animation: animation-translate 2s ease infinite alternate;
+}
+@keyframes animation-translate {
+	0%{
+		transform: translate(0%,0);
+	}
+	100%{
+		transform: translate(800%,0);
+	}
+	
+}
+.animation__rotate{
+	position: absolute;
+	left: 0;
+	padding-bottom: 50px;
+	width: 150px;
+	height: 150px;
+	background-color: brown;
+	border-radius: 5px;
+	animation: animation-rotate 2s ease infinite;
+}
+@keyframes animation-rotate {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.animation__rotation{
+	position: absolute;
+	right: 0;
+	width: 150px;
+	height: 150px;
+	background-color: brown;
+	border-radius: 5px;
+	animation: animation-rotate 2s linear infinite;
+}
+@keyframes page {
+	0%{
+		transform: translate(-200%,0);
+	}
+	100%{
+		transform: translate(0%,0);
+	}
+}
